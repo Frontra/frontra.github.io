@@ -1,6 +1,7 @@
 var genderDropdown;
 var ageDropdown;
 var priceDropdown;
+var frontFilter;
 var genderOptions;
 var ageOptions;
 var priceOptions;
@@ -11,6 +12,7 @@ $(function(){
     genderDropdown =     $("#dd-gender");
     ageDropdown =        $("#dd-age");
     priceDropdown =      $("#dd-price");
+    frontFilter =        $("#front-filter");
     genderOptions =      $("#options-gender");
     ageOptions =         $("#options-age");
     priceOptions =       $("#options-price");
@@ -19,6 +21,14 @@ $(function(){
     genderDropdown.click(openGenderOptions);
     ageDropdown   .click(openAgeOptions);
     priceDropdown .click(openPriceOptions);
+
+    genderDropdown.keypress(function(e){
+        if (e.which == 13) {
+            openGenderOptions();
+        }
+    });
+
+    frontFilter.find(".option").click(closeAllOptions);
     frontFilterOverlay.click(closeAllOptions);
 });
 
@@ -42,7 +52,8 @@ function openOptions(dropdown, options) {
     }).addClass("show");
 }
 
-function closeAllOptions() {
+function closeAllOptions(e) {
+    e.preventDefault();
     genderOptions.removeClass("show");
     ageOptions.removeClass("show");
     priceOptions.removeClass("show");
