@@ -11,7 +11,7 @@
 <header class="main-header">
     <div class="container">
         <img class="logo" src="logo.png" alt="findagift.no - gaveideer, gavetips"/>
-        <div class="menu-toggle">
+        <div class="menu-toggle" tabindex="0">
             <div class="menu-icon">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -20,20 +20,40 @@
         </div>
     </div>
 </header>
-<div class="front-filter">
+<div class="front-filter" id="front-filter">
     <div class="container">
         <div class="perfect-gift">
             <img src="http://i.imgur.com/h1gIxPt.png" alt="Gode gaveideer og gavetips"/>
         </div>
         <div class="dropdowns">
-            <div class="dropdown" id="dd-gender"></div>
-            <div class="dropdown" id="dd-age"></div>
-            <div class="dropdown" id="dd-price"></div>
+            <div class="dropdown" id="dd-gender" tabindex="0">Velg kjønn</div>
+            <div class="dropdown" id="dd-age" tabindex="0">Velg alder</div>
+            <div class="dropdown" id="dd-price" tabindex="0">Velg pris</div>
         </div>
         <div class="overlay" id="front-filter-overlay"></div>
-        <div class="options" id="options-gender"></div>
-        <div class="options" id="options-age"></div>
-        <div class="options" id="options-price"></div>
+        <div class="options" id="options-gender">
+            <a href="#" class="option">Alle</a>
+            <a href="#" class="option">Kvinne</a>
+            <a href="#" class="option">Mann</a>
+        </div>
+        <div class="options" id="options-age">
+            <a href="#" class="option">Alle</a>
+            <a href="#" class="option">0-3</a>
+            <a href="#" class="option">4-6</a>
+            <a href="#" class="option">7-10</a>
+            <a href="#" class="option">11-15</a>
+            <a href="#" class="option">16-25</a>
+            <a href="#" class="option">26-40</a>
+            <a href="#" class="option">40+</a>
+        </div>
+        <div class="options" id="options-price">
+            <a href="#" class="option">Alle</a>
+            <a href="#" class="option">0-200</a>
+            <a href="#" class="option">200-500</a>
+            <a href="#" class="option">500-1000</a>
+            <a href="#" class="option">1000-2000</a>
+            <a href="#" class="option">2000+</a>
+        </div>
     </div>
 </div>
 
